@@ -6,5 +6,5 @@ const nl = "\n"
 // Persistent project database
 var ProjectDB ProjectData
 
-// Port
-const Port = ":8000"
+// Address
+const Address = "127.0.0.1:8008"

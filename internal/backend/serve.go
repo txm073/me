@@ -6,6 +6,6 @@ import (
 )
 
 func RunServer() {
-	log.Println("Server running on port", Port)
-	log.Fatal(http.ListenAndServe(Port, nil))
+	log.Println("Server running on port", Address)
+	log.Fatal(http.ListenAndServe(Address, nil))
 }
