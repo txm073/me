@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Half moon icon">
+  <path fill="var(--color-blue)" fill-rule="evenodd" d="
+    M256 48
+    A208 208 0 1 0 256 464
+    A208 208 0 0 0 256 48
+    Z
+    M272 81
+    A176 176 0 0 1 272 431
+    Z
+  "/>
+</svg>

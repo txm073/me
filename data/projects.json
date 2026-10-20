@@ -1,0 +1,148 @@
+{
+  "projects": [
+    {
+      "title": "Mirror",
+      "active": true,
+      "links": ["https://github.com/txm073/mirror"],
+      "context": "Personal project",
+      "summary": "A pre-C++26 reflection library for mapping relations, serialisation & more",
+      "languages": [
+        "C++"
+      ],
+      "tags": [
+        "Preprocessor", "Templates", "Metaprogramming", "Static polymorphism", "Database"
+      ],
+      "startDate": {"month": 6, "year": 2026},
+      "contents": [
+        {
+          "type": "p",
+          "data": "First paragraph"
+        },
+        {
+          "type": "i",
+          "data": ""
+        }
+      ]
+    },
+    {
+      "title": "MyUI",
+      "links": ["https://github.com/txm073/mui"],
+      "context": "Personal project",
+      "summary": "A cross-platform UI framework built on top of ImGui",
+      "active": true,
+      "languages": [
+        "C++", "Kotlin", "Python", "CMake"
+      ],
+      "tags": [
+        "Mobile", "Desktop", "Graphical", "Cross-platform"
+      ],
+      "previewImage": "mui-thumbnail.png",
+      "startDate": {"month": 8, "year": 2026},
+      "contents": [
+        {
+          "type": "p",
+          "data": "First paragraph"
+        },
+        {
+          "type": "i",
+          "data": ""
+        }
+      ]
+    },
+    {
+      "title": "Health App",
+      "links": ["https://github.com/txm073/ultimate_health"],
+      "context": "Coursework project",
+      "summary": "A mobile application for tracking workouts & cooking healthy recipes",
+      "active": false,
+      "languages": [
+        "Dart", "Python"
+      ],
+      "tags": [
+        "Mobile", "Flutter", "UI", "Rest API", "Web scraping", "Database"
+      ],
+      "previewImage": "ultimate-health-thumbnail.png",
+      "startDate": {"month": 10, "year": 2023}
+    },
+    {
+      "title": "Portfolio",
+      "previewImage": "portfolio-thumbnail.png",
+      "links": [
+        "https://github.com/txm073/me"
+      ],
+      "context": "Personal project",
+      "summary": "The website you are currently reading",
+      "active": true,
+      "languages": [
+        "Go", "HTML", "CSS"
+      ],
+      "tags": [
+        "Web development", "HTMX", "UI"
+      ],
+      "startDate": {"month": 10, "year": 2026}
+    },
+    {
+      "title": "Geodesics",
+      "links": ["https://github.com/txm073/m2r"],
+      "context": "Coursework project",
+      "summary": "Part of a university coursework project using Python to compute and visualise geodesics on a torus",
+      "active": false,
+      "languages": [
+        "Python"
+      ],
+      "tags": [
+        "Numerical methods", "Algorithms", "PyTorch", "NumPy", "MatPlotLib"
+      ],
+      "previewImage": "m2r-thumbnail.png",
+      "startDate": {"month": 5, "year": 2026}
+    },
+    {
+      "title": "Kashyyk Hotel",
+      "links": ["https://github.com/txm073/kashyyk-hotel"],
+      "context": "Coursework project",
+      "summary": "A simple command line interface in C modelling a hotel booking system",
+      "active": false,
+      "languages": [
+        "C"
+      ],
+      "tags": [
+        "Command line interface"
+      ],
+      "startDate": {"month": 11, "year": 2022}
+    },
+    {
+      "title": "Encryption",
+      "links": [
+        "https://github.com/txm073/rsa",
+        "https://github.com/txm073/ecc",
+        "https://github.com/txm073/aes"
+      ],
+      "context": "Personal project",
+      "summary": "Basic implementations of a few encryption algorithms with no external libraries",
+      "active": false,
+      "languages": [
+        "C++", "Python"
+      ],
+      "tags": [
+        "Cryptography", "Number theory", "Algorithms"
+      ],
+      "startDate": {"month": 1, "year": 2022}
+    },
+    {
+      "title": "Project Manager",
+      "links": [
+        "https://github.com/txm073/.manager"
+      ],
+      "context": "Personal project",
+      "summary": "A command line utility to help organise projects stored on GitHub",
+      "active": false,
+      "languages": [
+        "Python"
+      ],
+      "tags": [
+        "Command line interface", "Automation", "Rest API"
+      ],
+      "startDate": {"month": 2, "year": 2022}
+    }
+  ]
+}

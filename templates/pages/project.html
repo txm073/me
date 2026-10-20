@@ -1,0 +1,21 @@
+{{ define "content" }}
+<h1>{{ .Title }}</h1>
+<p>{{ .Summary }}</p>
+{{ range .Contents }}
+  {{ if eq .Type "p" }}
+    {{ template "content-p" . }}
+  {{ else if eq .Type "h" }}
+    {{ template "content-h" . }}
+  {{ else if eq .Type "i" }}
+    {{ template "content-i" . }}
+  {{ else if eq .Type "v" }}
+    {{ template "content-v" . }}
+  {{ else if eq .Type "t" }}
+    {{ template "content-t" . }}
+  {{ else if eq .Type "l" }}
+    {{ template "content-l" . }}
+  {{ else if eq .Type "b" }}
+    {{ template "content-b" . }}
+  {{ end }}
+{{ end }}
+{{ end }}

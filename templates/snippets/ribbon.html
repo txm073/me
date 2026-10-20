@@ -1,0 +1,65 @@
+{{ define "ribbon" }}
+<header class="ribbon">
+  <button
+    class="ribbon-label brand"
+    hx-get="/"
+    hx-target="#main-content"
+    hx-swap="innerHTML"
+    hx-push-url="true">
+    Tom Barnes
+  </button>
+  <div class="ribbon-links">
+    <button
+      class="ribbon-label"
+      hx-get="/projects"
+      hx-target="#main-content"
+      hx-swap="innerHTML"
+      hx-push-url="true">
+      Projects
+    </button>
+    <button
+      class="ribbon-label"
+      hx-get="/activities"
+      hx-target="#main-content"
+      hx-swap="innerHTML"
+      hx-push-url="true">
+      Activities
+    </button>
+    <button
+      class="ribbon-label"
+      hx-get="/about"
+      hx-target="#main-content"
+      hx-swap="innerHTML"
+      hx-push-url="true">
+      About
+    </button>
+    <button
+      class="ribbon-label"
+      hx-get="/contact"
+      hx-target="#main-content"
+      hx-swap="innerHTML"
+      hx-push-url="true">
+      Contact
+    </button>
+    <label class="theme-switch" aria-label="Toggle dark theme">
+      <input type="checkbox" id="theme-toggle">
+      <span class="switch-track">
+        <span class="switch-thumb">
+          <svg
+            class="theme-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            aria-hidden="true"
+          >
+            <path
+              fill="currentColor"
+              d="M256 48 A208 208 0 1 0 256 464 A208 208 0 0 0 256 48 Z
+                  M272 81 A176 176 0 0 1 272 431 Z"
+            />
+          </svg>
+        </span>
+      </span>
+    </label>
+  </div>
+</header>
+{{ end }}

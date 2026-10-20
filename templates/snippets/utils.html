@@ -1,0 +1,9 @@
+<!-- Date format -->
+{{ define "date-format" }}
+  {{- if ne .Day 0 -}}
+    {{- if le .Day 9 }}0{{ end -}}
+    {{- .Day }}/
+  {{- end -}}
+  {{- if le .Month 9 }}0{{ end -}}
+  {{- .Month }}/{{ .Year -}}
+{{ end }}

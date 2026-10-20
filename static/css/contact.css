@@ -1,0 +1,155 @@
+
+.contact-page {
+  width: min(100% - 2rem, 760px);
+  margin: 0 auto;
+  padding: 2.5rem 0 3rem;
+  color: var(--color-fg);
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.contact-header {
+  padding: 1rem 0 1.5rem;
+}
+
+.contact-eyebrow {
+  margin: 0 0 1rem;
+  color: var(--color-gray);
+  font-family: monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+}
+
+.contact-header h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 7vw, 4rem);
+  font-weight: normal;
+  line-height: 1.1;
+}
+
+.contact-intro {
+  max-width: 540px;
+  margin: 1.25rem 0 0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.contact-divider {
+  width: 100%;
+  margin: 1.5rem 0 2rem;
+  border: 0;
+  border-top: 2px solid var(--color-border);
+}
+
+.contact-section h2,
+.contact-note h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+.contact-description {
+  margin: 0 0 1.25rem;
+  line-height: 1.7;
+}
+
+.contact-links {
+  border-top: 1px solid var(--color-border);
+}
+
+.contact-link {
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0.5rem;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-fg);
+  text-decoration: none;
+  transition: background 150ms ease, padding 150ms ease;
+}
+
+.contact-link:hover,
+.contact-link:focus-visible {
+  padding-right: 0.9rem;
+  padding-left: 0.9rem;
+  background: var(--color-surface);
+}
+
+.contact-link:focus-visible {
+  outline: 2px solid var(--color-blue);
+  outline-offset: 2px;
+}
+
+.contact-link-label {
+  color: var(--color-blue);
+  font-weight: bold;
+}
+
+.contact-link-value {
+  overflow-wrap: anywhere;
+  line-height: 1.5;
+}
+
+.contact-link-arrow {
+  color: var(--color-orange);
+  font-size: 1.2rem;
+}
+
+.contact-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 2.5rem 0;
+  padding: 1.25rem;
+  border: 2px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.contact-note-mark {
+  color: var(--color-orange);
+  font-size: 1.5rem;
+}
+
+.contact-note p {
+  margin: 0.5rem 0 0;
+  line-height: 1.8;
+}
+
+.contact-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-gray);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 520px) {
+  .contact-page {
+    padding-top: 1.5rem;
+  }
+
+  .contact-link {
+    grid-template-columns: 1fr auto;
+    gap: 0.3rem 0.75rem;
+  }
+
+  .contact-link-label {
+    grid-column: 1;
+  }
+
+  .contact-link-value {
+    grid-column: 1;
+  }
+
+  .contact-link-arrow {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+
+  .contact-footer {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+}

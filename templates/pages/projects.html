@@ -1,0 +1,64 @@
+{{ define "content" }}
+<div class="projects-page">
+  <header class="projects-header">
+    <h1>Projects</h1>
+    <p>A collection of programs I am building and experimenting with.</p>
+    <div class="project-filters">
+      <!-- Will potentially add a filter bar here -->
+    </div>
+  </header>
+  <section class="project-list" aria-label="Project list">
+    {{ range . }}
+    <a
+      class="project-preview"
+      href="/projects/{{ .EndPoint }}"
+      hx-get="/projects/{{ .EndPoint }}"
+      hx-target="#main-content"
+      hx-swap="innerHTML"
+      hx-push-url="true"
+    >
+      {{ if .PreviewImage }}
+      <img
+        class="project-preview-image"
+        src="/data/images/{{ .PreviewImage }}"
+        alt="{{ .PreviewImage }}"
+        loading="lazy"
+      >
+      {{ end }}
+      <div class="project-preview-body">
+        <h2>{{ .Title }}</h2>
+        <p class="project-preview-info">
+          <span class="project-preview-date">
+            {{ template "date-format" .StartDate }}
+          </span>
+          {{- if .Context -}}
+          <span class="project-preview-context">•</span>
+          <span class="project-preview-context">
+            {{- .Context -}}
+          </span>
+          {{- end -}}
+          <span class="project-preview-context">•</span>
+          {{- if .Active -}}
+          <span class="project-active">✅</span>
+          {{- else -}}
+          <span class="project-inactive">❌</span>
+          {{- end -}}
+        </p>
+        <p>{{ .Summary }}</p>
+        <div class="project-tags">
+          {{ range .Tags }}
+            <span class="project-tag">{{ . }}</span>
+          {{ end }}
+        </div>
+        <div class="project-tags">
+          {{ range .Languages }}
+            <span class="project-tag language-tag">{{ . }}</span>
+          {{ end }}
+        </div>
+        <span class="read-more">View project →</span>
+      </div>
+    </a>
+    {{ end }}
+  </section>
+</div>
+{{ end }}

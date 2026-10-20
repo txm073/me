@@ -1,0 +1,102 @@
+/* Top ribbon */
+
+.ribbon {
+  position: sticky;
+  top: 0;
+  height: 70px;
+  z-index: 10 !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  padding: 12px clamp(20px, 5vw, 64px);
+
+  border: 2px solid var(--color-border);
+  border-bottom-width: 3px;
+  /*background: red !important;*/
+  background: var(--color-surface);
+  border-color: var(--color-border);
+}
+
+
+/* Page links */
+
+.ribbon-label {
+  color: var(--color-text-muted);
+  background: none;
+  border: none;
+  font-size: 0.95rem;
+  margin: 0;
+  padding: 0 10px;;
+  cursor: pointer;
+}
+
+.brand {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+}
+
+.nav-button {
+  border-color: var(--color-border);
+  box-shadow: 3px 3px 0 var(--color-shadow);
+}
+
+
+/* Theme toggle */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.theme-switch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 54px;
+  height: 28px;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.theme-switch input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch-track {
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-bg);
+  border: 2px solid var(--color-border);
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.switch-thumb {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 3px;
+  top: 2px;
+  background-color: var(--color-blue);
+  border: 2px solid var(--color-fg);
+  border-radius: 3px;
+  transition: transform 0.2s;
+}
+
+.theme-icon {
+  padding: 2px 2px 3px 2px;
+  color: var(--color-text);
+}
+
+.theme-switch input:checked + .switch-track .switch-thumb {
+  transform: translateX(24px);
+}

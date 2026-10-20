@@ -1,0 +1,39 @@
+<!--Paragraphs-->
+{{ define "content-p" }}
+<p>Paragraph: </p>
+<p>{{ .Data }}</p>
+{{ end }}
+
+<!--Headings-->
+{{ define "content-h" }}
+<p>Heading: </p>
+<h3>{{ .Data }}</h3>
+{{ end }}
+
+<!--Images-->
+{{ define "content-i" }}
+<p>Image: </p>
+<img src="/data/images/{{ .Data }}" alt="Logo">
+{{ end }}
+
+<!--Videos-->
+{{ define "content-v" }}
+
+{{ end }}
+
+<!--Tables-->
+{{ define "content-t" }}
+
+{{ end }}
+
+<!--Links-->
+{{ define "content-l" }}
+<p>Link: </p>
+<a href="{{ .Data }}">{{ .Data }}</a>
+{{ end }}
+
+<!--Bold-->
+{{ define "content-b" }}
+<p>Bold: </p>
+<b>{{ .Data }}</b>
+{{ end }}

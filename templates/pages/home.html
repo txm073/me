@@ -1,0 +1,61 @@
+{{define "content"}}
+<div class="summary-card">
+  <div class="summary-text">
+  <h1 class="greeting">Hello</h1>
+  <p class="bio">
+    I'm Tom. I am currently in my third year studying mathematics
+    at university. I have been doing programming as my biggest
+    hobby for many years now, with my main interests including
+    machine learning, desktop & mobile app development and automation.
+  </p>
+  </div>
+  <div class="profile-picture">
+    <img src="/static/images/profile.jpg" alt="Picture">
+  </div>
+</div>
+<hr>
+<p class="intro">
+  Check out some of the projects I've built and the activities
+  I enjoy outside of software development.
+</p>
+<nav class="page-links top-page-links" aria-label="Explore portfolio">
+  <button
+    class="nav-button first-button"
+    hx-get="/projects"
+    hx-target="#main-content"
+    hx-swap="innerHTML"
+    hx-push-url="true">
+    <span>Coding Projects</span>
+    <span aria-hidden="true">→</span>
+  </button>
+  <button
+    class="nav-button second-button"
+    hx-get="/activities"
+    hx-target="#main-content"
+    hx-swap="innerHTML"
+    hx-push-url="true">
+    <span>Extra Activities</span>
+    <span aria-hidden="true">→</span>
+  </button>
+</nav>
+<nav class="page-links" aria-label="Explore portfolio">
+  <button
+    class="nav-button third-button"
+    hx-get="/about"
+    hx-target="#main-content"
+    hx-swap="innerHTML"
+    hx-push-url="true">
+    <span>About Me</span>
+    <span aria-hidden="true">→</span>
+  </button>
+  <button
+    class="nav-button fourth-button"
+    hx-get="/contact"
+    hx-target="#main-content"
+    hx-swap="innerHTML"
+    hx-push-url="true">
+    <span>Contact</span>
+    <span aria-hidden="true">→</span>
+  </button>
+</nav>
+{{end}}

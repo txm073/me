@@ -1,0 +1,296 @@
+/* Colours and other variables */
+
+:root {
+  color-scheme: light;
+  --container: 800px;
+
+  /* Backgrounds */
+  --color-background: #fbf1c7;
+  --color-surface: #f9f5d7;
+  --color-surface-raised: #f2e5bc;
+  --color-surface-hover: #ebdbb2;
+
+  /* Text */
+  --color-text: #282828;
+  --color-text-muted: #665c54;
+  --color-text-subtle: #7c6f64;
+
+  /* Borders and shadows */
+  --color-border: #504945;
+  --color-border-subtle: #bdae93;
+  --color-shadow: #d5c4a1;
+
+  /* Interactive elements */
+  --color-primary: #79740e;
+  --color-primary-hover: #5f5b0b;
+  --color-secondary: #af3a03;
+  --color-secondary-hover: #8f3003;
+  --color-link: #076678;
+
+  /* Status colours */
+  --color-success: #79740e;
+  --color-warning: #b57614;
+  --color-error: #9d0006;
+  --color-info: #076678;
+
+  /* UI details */
+  --color-selection: #d5c4a1;
+  --color-focus: #af3a03;
+
+  /* Colors */
+  /* Red */
+   --color-red: #cc241d;
+   --color-red-hover: #9d0006;
+
+   /* Green */
+   --color-green: #98971a;
+   --color-green-hover: #79740e;
+
+   /* Yellow */
+   --color-yellow: #d79921;
+   --color-yellow-hover: #b57614;
+
+   /* Blue */
+   --color-blue: #458588;
+   --color-blue-hover: #076678;
+
+   /* Purple */
+   --color-purple: #b16286;
+   --color-purple-hover: #8f3f71;
+
+   /* Aqua */
+   --color-aqua: #689d6a;
+   --color-aqua-hover: #427b58;
+
+   /* Orange */
+   --color-orange: #d65d0e;
+   --color-orange-hover: #af3a03;
+
+   /* Gray */
+   --color-gray: #928374;
+   --color-gray-hover: #7c6f64;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* Backgrounds */
+  --color-background: #282828;
+  --color-surface: #1d2021;
+  --color-surface-raised: #3c3836;
+  --color-surface-hover: #504945;
+
+  /* Text */
+  --color-text: #fbf1c7;
+  --color-text-muted: #d5c4a1;
+  --color-text-subtle: #bdae93;
+
+  /* Borders and shadows */
+  --color-border: #a89984;
+  --color-border-subtle: #665c54;
+  --color-shadow: #1d2021;
+
+  /* Interactive elements */
+  --color-primary: #b8bb26;
+  --color-primary-hover: #98971a;
+  --color-secondary: #fe8019;
+  --color-secondary-hover: #d65d0e;
+  --color-link: #83a598;
+
+  /* Status colours */
+  --color-success: #b8bb26;
+  --color-warning: #fabd2f;
+  --color-error: #fb4934;
+  --color-info: #83a598;
+
+  /* UI details */
+  --color-selection: #504945;
+  --color-focus: #fe8019;
+
+  /* Colors */
+  /* Red */
+  --color-red: #fb4934;
+  --color-red-hover: #cc241d;
+
+  /* Green */
+  --color-green: #b8bb26;
+  --color-green-hover: #98971a;
+
+  /* Yellow */
+  --color-yellow: #fabd2f;
+  --color-yellow-hover: #d79921;
+
+  /* Blue */
+  --color-blue: #83a598;
+  --color-blue-hover: #458588;
+
+  /* Purple */
+  --color-purple: #d3869b;
+  --color-purple-hover: #b16286;
+
+  /* Aqua */
+  --color-aqua: #8ec07c;
+  --color-aqua-hover: #689d6a;
+
+  /* Orange */
+  --color-orange: #fe8019;
+  --color-orange-hover: #d65d0e;
+
+  /* Gray */
+  --color-gray: #a89984;
+  --color-gray-hover: #928374;
+}
+
+/* Shared styles */
+
+body {
+  background: var(--color-background);
+  color: var(--color-text);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font: inherit;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--rust);
+  outline-offset: 4px;
+}
+
+/* ---------- Top ribbon ---------- */
+
+
+/* ---------- main-content page ---------- */
+
+.main-content {
+  width: min(var(--container), calc(100% - 40px));
+
+  min-height: calc(100vh - 76px);
+  margin-inline: auto;
+  padding-block: 80px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+hr {
+  border: none;
+  border-top: 2px solid var(--color-border);
+  margin: 2rem 0;
+  width: 100%;
+}
+
+h1 {
+  max-width: 650px;
+  margin: 0;
+
+  font-size: clamp(2.5rem, 6vw, 4.2rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.045em;
+}
+
+
+
+/* ---------- Navigation buttons ---------- */
+
+/* ---------- HTMX loading feedback ---------- */
+
+#main-content {
+  transition: opacity 120ms ease;
+}
+
+#main-content.htmx-request {
+  opacity: 0.55;
+}
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 700px) {
+  .main-content {
+      padding-block: 64px;
+  }
+
+  .page-links {
+      grid-template-columns: 1fr;
+  }
+
+  .nav-button {
+      min-height: 66px;
+  }
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+
+  /*.ribbon {
+    min-height: 66px;
+    padding-inline: 18px;
+  }*/
+
+  .brand {
+    font-size: 1.2rem;
+  }
+
+  .main-content {
+    width: calc(100% - 36px);
+    min-height: calc(100vh - 66px);
+    padding-block: 48px;
+  }
+
+  h1 {
+    font-size: clamp(2.35rem, 10vw, 3.2rem);
+  }
+
+  .intro {
+    margin-block: 18px 28px;
+    font-size: 1rem;
+  }
+
+  .nav-button {
+    padding: 16px;
+    font-size: 1rem;
+  }
+}
+
+/* ---------- Reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
