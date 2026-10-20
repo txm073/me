@@ -1,0 +1,83 @@
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Tooltip text */
+.tooltip::after {
+  z-index: 20 !important;
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+
+  width: max-content;
+  max-width: 240px;
+  padding: 0.5rem 0.75rem;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  text-align: center;
+  overflow-wrap: anywhere;
+
+  color: var(--color-fg);
+  background: var(--color-bg);
+  border: 2px solid var(--color-border);
+  box-shadow: 3px 3px 0 var(--color-border);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 100;
+
+  transition:
+    opacity 150ms ease,
+    transform 150ms ease,
+    visibility 150ms ease;
+}
+
+/* Tooltip arrow */
+.tooltip::before {
+  content: "";
+  position: absolute;
+  bottom: calc(100% + 2px);
+  left: 50%;
+  transform: translateX(-50%);
+
+  border: 6px solid transparent;
+  border-top-color: var(--color-border);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 10;
+
+  transition: opacity 150ms ease;
+}
+
+/* Show on hover or keyboard focus */
+.tooltip:hover::after,
+.tooltip:focus-within::after,
+.tooltip:hover::before,
+.tooltip:focus-within::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.tooltip:hover::after,
+.tooltip:focus-within::after {
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .tooltip::before,
+  .tooltip::after {
+    transition: none;
+  }
+}

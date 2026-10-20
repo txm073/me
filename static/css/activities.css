@@ -1,0 +1,87 @@
+
+.activities-page {
+  width: min(100% - 2rem, 760px);
+  margin: 0 auto;
+  padding: 2.5rem 0 3rem;
+  color: var(--color-fg);
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.activities-header {
+  padding: 1rem 0 1.5rem;
+}
+
+.activities-eyebrow {
+  margin: 0 0 1rem;
+  color: var(--color-gray);
+  font-family: monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+}
+
+.activities-header h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 7vw, 4rem);
+  font-weight: normal;
+  line-height: 1.1;
+}
+
+.activities-intro {
+  margin: 1rem 0 0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.activities-divider {
+  width: 100%;
+  margin: 1.5rem 0 2rem;
+  border: 0;
+  border-top: 2px solid var(--color-border);
+}
+
+.activities-section {
+  margin-bottom: 2rem;
+}
+
+.activities-section h2 {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+/* Bulleted entries */
+.activities-list {
+  margin: 0;
+  padding-left: 1.5rem;
+  list-style-type: square;
+}
+
+.activities-list li {
+  padding: 0.65rem 0 0.65rem 0.35rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.activities-list li::marker {
+  color: var(--color-orange);
+  font-size: 0.9em;
+}
+
+.activities-list li:last-child {
+  border-bottom: none;
+}
+
+.activities-list p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 520px) {
+  .activities-page {
+    padding-top: 1.5rem;
+  }
+
+  .activities-list {
+    padding-left: 1.25rem;
+  }
+}

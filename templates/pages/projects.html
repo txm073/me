@@ -39,9 +39,9 @@
           {{- end -}}
           <span class="project-preview-context">•</span>
           {{- if .Active -}}
-          <span class="project-active">✅</span>
+          <span class="project-active tooltip" data-tooltip="Actively being developed">✅</span>
           {{- else -}}
-          <span class="project-inactive">❌</span>
+          <span class="project-inactive tooltip" data-tooltip="Not actively being developed">❌</span>
           {{- end -}}
         </p>
         <p>{{ .Summary }}</p>
