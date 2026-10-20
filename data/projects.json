@@ -40,12 +40,52 @@
       "startDate": {"month": 8, "year": 2026},
       "contents": [
         {
-          "type": "p",
-          "data": "First paragraph"
+          "type": "h",
+          "data": "Inspiration"
         },
         {
-          "type": "i",
-          "data": ""
+          "type": "p",
+          "data": "I love creating mobile & desktop applications, and I love using C++, however there are not many good libraries or frameworks for for creating modern looking graphical apps. There is Qt, WxWidgets, Gtk etcetera. But these are large frameworks and only Qt is also compatible with mobile. I have used ImGui many times and become accustomed to the immediate mode design pattern. Since it supports simple rendering with OpenGL, with a couple hundred lines of boilerplate code it can also be run easily on Android. I decided to make my own framework from scratch."
+        },
+        {
+          "type": "h",
+          "data": "A note"
+        },
+        {
+          "type": "p",
+          "data": "Although this project is over 10000 lines already, it is still in very early stages of development, so I have not made any proper applications as of yet, only a simple Hello World application seen at the top of this page."
+        },
+        {
+          "type": "h",
+          "data": "Framework features"
+        },
+        {
+          "type": "p",
+          "data": "Since ImGui is a *relatively* barebones library, I have started by implementing several utility interfaces for the backend, such as"
+        },
+        {
+          "type": "li",
+          "data": "a serialisation system using my adapted from my Mirror library"
+        },
+        {
+          "type": "li",
+          "data": "manager classes for loading images, fonts, audio and other assets"
+        },
+        {
+          "type": "li",
+          "data": "cross-platform local storage with encryption support"
+        },
+        {
+          "type": "li",
+          "data": "accessibility options like dpi-awareness, font scaling and proper touch input support"
+        },
+        {
+          "type": "li",
+          "data": "a high level interface to bridge between C++ and Kotlin on Android"
+        },
+        {
+          "type": "li",
+          "data": "higher level wrappers around some of the project dependencies, such as libcurl, subprocess and json"
         }
       ]
     },

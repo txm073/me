@@ -17,6 +17,7 @@ const (
 	ContentTable     string = "t"
 	ContentLink      string = "l"
 	ContentBold      string = "b"
+	ContentListItem  string = "li"
 )
 
 type Content struct {

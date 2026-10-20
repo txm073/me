@@ -1,18 +1,15 @@
 <!--Paragraphs-->
 {{ define "content-p" }}
-<p>Paragraph: </p>
-<p>{{ .Data }}</p>
+<p class="page-content-p">{{ .Data }}</p>
 {{ end }}
 
 <!--Headings-->
 {{ define "content-h" }}
-<p>Heading: </p>
-<h3>{{ .Data }}</h3>
+<h3 class="page-content-heading">{{ .Data }}</h3>
 {{ end }}
 
 <!--Images-->
 {{ define "content-i" }}
-<p>Image: </p>
 <img src="/data/images/{{ .Data }}" alt="Logo">
 {{ end }}
 
@@ -36,4 +33,12 @@
 {{ define "content-b" }}
 <p>Bold: </p>
 <b>{{ .Data }}</b>
+{{ end }}
+
+<!--List items-->
+{{ define "content-li" }}
+<div class="page-content-li">
+  <b>•</b>
+  <p>{{ .Data }}</p>
+</div>
 {{ end }}

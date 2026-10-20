@@ -1,6 +1,87 @@
 {{ define "content" }}
-<h1>{{ .Title }}</h1>
-<p>{{ .Summary }}</p>
+<article class="project-page">
+
+  <!-- Project heading -->
+  <header class="project-header">
+
+    {{ if .PreviewImage }}
+    <figure class="project-hero">
+      <img
+        src="/data/images/{{ .PreviewImage }}"
+        alt="Preview of {{ .Title }}"
+        width="1200"
+        height="675"
+        fetchpriority="high"
+      >
+    </figure>
+    {{ end }}
+
+    <div class="project-heading">
+      <h1 class="project-title">{{ .Title }}</h1>
+
+      <p class="project-summary">{{ .Summary }}</p>
+
+      <div class="project-meta">
+        {{ if .Tags }}
+          <div class="project-tags" aria-label="Project tags">
+            {{ range .Tags }}
+              <span class="project-tag">{{ . }}</span>
+            {{ end }}
+          </div>
+        {{ end }}
+        {{ if .Languages }}
+          <div class="project-tags" aria-label="Project languages">
+            {{ range .Languages }}
+              <span class="project-tag language-tag">{{ . }}</span>
+            {{ end }}
+          </div>
+        {{ end }}
+      </div>
+      <div class="project-meta project-extra-info">
+        <p class="project-preview-info">
+          <span class="project-preview-date">
+            {{ template "date-format" .StartDate }}
+          </span>
+          {{- if .Context -}}
+          <span class="project-preview-context">•</span>
+          <span class="project-preview-context">
+            {{- .Context -}}
+          </span>
+          {{- end -}}
+          <span class="project-preview-context">•</span>
+          {{- if .Active -}}
+          <span class="project-active tooltip" data-tooltip="Actively being developed">✅</span>
+          {{- else -}}
+          <span class="project-inactive tooltip" data-tooltip="Not actively being developed">❌</span>
+          {{- end -}}
+        </p>
+        {{ if .Links }}
+          <nav class="project-links" aria-label="Project links">
+            {{ range .Links }}
+              <a
+                class="project-link"
+                href="{{ . }}"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span aria-hidden="true">↗</span>
+              </a>
+            {{ end }}
+          </nav>
+        {{ end }}
+      </div>
+    </div>
+
+  </header>
+
+  <hr class="project-divider">
+
+  <!-- Write the project article here -->
+  <div class="project-article">
+    <!-- Article content goes here -->
+  </div>
+
+</article>
 {{ range .Contents }}
   {{ if eq .Type "p" }}
     {{ template "content-p" . }}
@@ -16,6 +97,8 @@
     {{ template "content-l" . }}
   {{ else if eq .Type "b" }}
     {{ template "content-b" . }}
+  {{ else if eq .Type "li" }}
+    {{ template "content-li" . }}
   {{ end }}
 {{ end }}
 {{ end }}
