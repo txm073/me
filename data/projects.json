@@ -36,7 +36,7 @@
       "tags": [
         "Mobile", "Desktop", "Graphical", "Cross-platform"
       ],
-      "previewImage": "mui-thumbnail.png",
+      "previewImage": "mui-thumbnail.webp",
       "startDate": {"month": 8, "year": 2026},
       "contents": [
         {
@@ -61,12 +61,12 @@
       "tags": [
         "Mobile", "Flutter", "UI", "Rest API", "Web scraping", "Database"
       ],
-      "previewImage": "ultimate-health-thumbnail.png",
+      "previewImage": "ultimate-health-thumbnail.webp",
       "startDate": {"month": 10, "year": 2023}
     },
     {
       "title": "Portfolio",
-      "previewImage": "portfolio-thumbnail.png",
+      "previewImage": "portfolio-thumbnail.webp",
       "links": [
         "https://github.com/txm073/me"
       ],
@@ -93,7 +93,7 @@
       "tags": [
         "Numerical methods", "Algorithms", "PyTorch", "NumPy", "MatPlotLib"
       ],
-      "previewImage": "m2r-thumbnail.png",
+      "previewImage": "m2r-thumbnail.webp",
       "startDate": {"month": 5, "year": 2026}
     },
     {
